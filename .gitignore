@@ -1,0 +1,9 @@
+data/
+outputs/
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.matplotlib/
+.DS_Store
