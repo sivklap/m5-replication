@@ -10,7 +10,7 @@ import pandas as pd
 from statsmodels.tsa.arima.model import ARIMA
 from tqdm import tqdm
 
-from src.config import HORIZON, PAPER_ARIMA_EXAMPLE_ORDER, TRAIN_END_DAY
+from src.config import HORIZON, PAPER_ARIMA_EXAMPLE_ORDER, PAPER_ARIMA_ORDER, TRAIN_END_DAY
 from src.evaluate import rmse
 
 
@@ -21,7 +21,7 @@ def select_arima_order(
     q_range: range = range(3),
 ) -> tuple[int, int, int, float]:
     best_aic = np.inf
-    best_order = (1, 1, 1)
+    best_order = PAPER_ARIMA_ORDER
     y = y.dropna().astype(float)
     for p, d, q in product(p_range, d_range, q_range):
         try:
@@ -44,22 +44,37 @@ def fit_arima(y: pd.Series, order: tuple[int, int, int] | None = None):
     return model.fit(), order
 
 
+def forecast_values(
+    y_train: pd.Series,
+    horizon: int,
+    order: tuple[int, int, int],
+    *,
+    clip_negative: bool = False,
+) -> tuple[np.ndarray, dict]:
+    fit, used_order = fit_arima(y_train, order=order)
+    forecast = np.asarray(fit.forecast(steps=horizon), dtype=float)
+    if clip_negative:
+        forecast = np.maximum(forecast, 0)
+    meta = {"order": used_order, "aic": float(fit.aic)}
+    return forecast, meta
+
+
 def forecast_arima(
     series_df: pd.DataFrame,
     order: tuple[int, int, int] | None = None,
     horizon: int = HORIZON,
+    *,
+    clip_negative: bool = False,
 ) -> tuple[pd.DataFrame, dict]:
+    order = order or PAPER_ARIMA_ORDER
     train = series_df[series_df["day_num"] <= TRAIN_END_DAY].copy()
     test = series_df[series_df["day_num"] > TRAIN_END_DAY].head(horizon).copy()
-    y_train = train["sales"]
-
-    fit, used_order = fit_arima(y_train, order=order)
-    forecast = fit.forecast(steps=horizon)
-    forecast = np.maximum(forecast, 0)
+    forecast, meta = forecast_values(
+        train["sales"], horizon, order, clip_negative=clip_negative
+    )
 
     result = test[["id", "cat_id", "day_num", "date", "sales"]].copy()
-    result["prediction"] = forecast.values
-    meta = {"order": used_order, "aic": float(fit.aic)}
+    result["prediction"] = forecast
     return result, meta
 
 
@@ -67,8 +82,11 @@ def _forecast_arima_one(
     series_df: pd.DataFrame,
     order: tuple[int, int, int] | None,
     horizon: int,
+    clip_negative: bool,
 ) -> tuple[pd.DataFrame, dict]:
-    pred, meta = forecast_arima(series_df, order=order, horizon=horizon)
+    pred, meta = forecast_arima(
+        series_df, order=order, horizon=horizon, clip_negative=clip_negative
+    )
     meta["id"] = series_df["id"].iloc[0]
     return pred, meta
 
@@ -79,7 +97,10 @@ def forecast_arima_batch(
     order: tuple[int, int, int] | None = None,
     horizon: int = HORIZON,
     n_jobs: int = 1,
+    *,
+    clip_negative: bool = False,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
+    order = order or PAPER_ARIMA_ORDER
     preds: list[pd.DataFrame] = []
     meta_rows: list[dict] = []
 
@@ -88,7 +109,9 @@ def forecast_arima_batch(
             series_df = panel.loc[panel["id"] == series_id]
             if series_df.empty:
                 continue
-            pred, meta = forecast_arima(series_df, order=order, horizon=horizon)
+            pred, meta = forecast_arima(
+                series_df, order=order, horizon=horizon, clip_negative=clip_negative
+            )
             meta["id"] = series_id
             preds.append(pred)
             meta_rows.append(meta)
@@ -100,7 +123,9 @@ def forecast_arima_batch(
         }
         with ProcessPoolExecutor(max_workers=n_jobs) as pool:
             futures = {
-                pool.submit(_forecast_arima_one, tasks[sid], order, horizon): sid
+                pool.submit(
+                    _forecast_arima_one, tasks[sid], order, horizon, clip_negative
+                ): sid
                 for sid in tasks
             }
             for fut in tqdm(as_completed(futures), total=len(futures), desc="ARIMA"):
@@ -112,6 +137,8 @@ def forecast_arima_batch(
 
 
 def evaluate_example(series_df: pd.DataFrame) -> dict:
-    pred, meta = forecast_arima(series_df, order=PAPER_ARIMA_EXAMPLE_ORDER)
+    pred, meta = forecast_arima(
+        series_df, order=PAPER_ARIMA_EXAMPLE_ORDER, clip_negative=False
+    )
     score = rmse(pred["sales"], pred["prediction"])
     return {"rmse": score, **meta}

@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 
+import gc
+
 import pandas as pd
 
-from src.config import TEST_END_DAY, TEST_START_DAY, TRAIN_END_DAY
+from src.config import CATEGORIES, TEST_END_DAY, TEST_START_DAY, TRAIN_END_DAY
 
 CATEGORICAL_FEATURES = [
     "item_id",
@@ -12,6 +14,21 @@ CATEGORICAL_FEATURES = [
     "cat_id",
     "store_id",
     "state_id",
+    "weekday",
+]
+
+# Paper Table 1: engineered features plus M5 calendar / price fields.
+EVENT_FEATURES = ["has_event_1", "has_event_2"]
+
+ORIGINAL_FEATURES = [
+    "wday",
+    "month",
+    "year",
+    "wm_yr_wk",
+    "snap_CA",
+    "snap_TX",
+    "snap_WI",
+    "sell_price",
 ]
 
 LIGHTGBM_FEATURES = [
@@ -24,9 +41,8 @@ LIGHTGBM_FEATURES = [
     "week",
     "quarter",
     "mday",
-    "event_type_1",
-    "event_type_2",
-    "sell_price",
+    *EVENT_FEATURES,
+    *ORIGINAL_FEATURES,
     *CATEGORICAL_FEATURES,
 ]
 
@@ -36,8 +52,14 @@ def add_calendar_features(df: pd.DataFrame) -> pd.DataFrame:
     out["week"] = out["date"].dt.isocalendar().week.astype(int)
     out["quarter"] = out["date"].dt.quarter.astype(int)
     out["mday"] = out["date"].dt.day.astype(int)
-    out["event_type_1"] = out["event_type_1"].fillna("None").astype("category")
-    out["event_type_2"] = out["event_type_2"].fillna("None").astype("category")
+    # Paper: two binary event features for calendar holidays / special days.
+    out["has_event_1"] = out["event_name_1"].notna().astype(int)
+    out["has_event_2"] = out["event_name_2"].notna().astype(int)
+    if "weekday" in out.columns:
+        out["weekday"] = out["weekday"].astype("category")
+    for col in ("wday", "month", "year", "wm_yr_wk", "snap_CA", "snap_TX", "snap_WI"):
+        if col in out.columns:
+            out[col] = pd.to_numeric(out[col], errors="coerce").fillna(0).astype(int)
     return out
 
 
@@ -94,3 +116,21 @@ def train_test_feature_frames(
         (full["day_num"] >= TEST_START_DAY) & (full["day_num"] <= TEST_END_DAY)
     ].copy()
     return train, test
+
+
+def prepare_train_matrix_chunked(panel: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]:
+    """Build the training matrix category-by-category to limit peak memory."""
+    x_chunks: list[pd.DataFrame] = []
+    y_chunks: list[pd.Series] = []
+    for cat in CATEGORIES:
+        cat_panel = panel.loc[panel["cat_id"] == cat]
+        if cat_panel.empty:
+            continue
+        frame = build_lightgbm_frame(cat_panel)
+        train_df = frame.loc[frame["day_num"] <= TRAIN_END_DAY]
+        x_chunk, y_chunk = prepare_lightgbm_matrix(train_df)
+        x_chunks.append(x_chunk)
+        y_chunks.append(y_chunk)
+        del frame, train_df, cat_panel, x_chunk, y_chunk
+        gc.collect()
+    return pd.concat(x_chunks, ignore_index=True), pd.concat(y_chunks, ignore_index=True)

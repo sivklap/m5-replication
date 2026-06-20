@@ -6,7 +6,16 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.config import DATA_DIR, TEST_END_DAY, TEST_START_DAY, TRAIN_END_DAY
+from src.config import (
+    BENCHMARK_SEED,
+    BENCHMARK_SERIES_FILE,
+    DATA_DIR,
+    RANDOM_SEED,
+    RESULTS_DIR,
+    TEST_END_DAY,
+    TEST_START_DAY,
+    TRAIN_END_DAY,
+)
 
 PANEL_CACHE = "panel.parquet"
 
@@ -129,10 +138,19 @@ def split_train_test(panel: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
 def sample_series_ids(
     panel: pd.DataFrame | None = None,
     per_category: int = 100,
-    seed: int = 42,
+    seed: int | None = None,
     data_dir: Path = DATA_DIR,
+    use_saved: bool = True,
 ) -> list[str]:
     """Sample item-store ids for Table 3 style benchmarking."""
+    if use_saved and BENCHMARK_SERIES_FILE.exists():
+        saved = pd.read_csv(BENCHMARK_SERIES_FILE)
+        if "id" in saved.columns and len(saved) >= per_category * 3:
+            return saved["id"].tolist()
+
+    if seed is None:
+        seed = BENCHMARK_SEED
+
     if panel is None:
         sales = load_sales_wide(data_dir)
     else:
@@ -165,6 +183,20 @@ def resolve_series_id(panel: pd.DataFrame, series_id: str) -> str | None:
 def get_series(panel: pd.DataFrame, series_id: str) -> pd.DataFrame:
     resolved = resolve_series_id(panel, series_id) or series_id
     return panel.loc[panel["id"] == resolved].sort_values("day_num").reset_index(drop=True)
+
+
+def load_benchmark_series_ids(
+    per_category: int = 100,
+    seed: int | None = None,
+    data_dir: Path = DATA_DIR,
+) -> list[str]:
+    """Fixed 300-series sample; prefers calibrated benchmark_series_ids.csv."""
+    return sample_series_ids(
+        per_category=per_category,
+        seed=seed if seed is not None else BENCHMARK_SEED,
+        data_dir=data_dir,
+        use_saved=True,
+    )
 
 
 def build_holidays(calendar: pd.DataFrame) -> pd.DataFrame:

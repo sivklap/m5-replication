@@ -7,3 +7,4 @@ venv/
 *.egg-info/
 .matplotlib/
 .DS_Store
+.gh-config/

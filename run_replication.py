@@ -16,14 +16,22 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.config import (  # noqa: E402
     ARIMA_EXAMPLE_ID,
+    BENCHMARK_SEED,
+    BENCHMARK_SERIES_FILE,
     DATA_DIR,
+    PAPER_ARIMA_ORDER,
     PAPER_TABLE3,
     PROPHET_EXAMPLE_ID,
-    RANDOM_SEED,
     RESULTS_DIR,
 )
-from src.evaluate import rmse, rmse_by_category  # noqa: E402
-from src.load_data import build_holidays, build_panel, get_series, load_calendar, sample_series_ids  # noqa: E402
+from src.evaluate import per_series_rmse_table, rmse, rmse_by_category  # noqa: E402
+from src.load_data import (  # noqa: E402
+    build_holidays,
+    build_panel,
+    get_series,
+    load_benchmark_series_ids,
+    load_calendar,
+)
 
 
 def _save_json(obj: dict, name: str) -> None:
@@ -40,7 +48,7 @@ def _save_csv(df: pd.DataFrame, name: str) -> None:
     print(f"Saved {path}")
 
 
-def run_examples(panel: pd.DataFrame, data_dir: Path) -> None:
+def run_examples(panel: pd.DataFrame, data_dir: Path, methods: tuple[str, ...] = ("arima", "prophet", "lightgbm")) -> None:
     from src.models import arima_model, lightgbm_model, prophet_model
 
     example_ids = list({ARIMA_EXAMPLE_ID, PROPHET_EXAMPLE_ID})
@@ -50,30 +58,40 @@ def run_examples(panel: pd.DataFrame, data_dir: Path) -> None:
     calendar = load_calendar(data_dir)
     results: dict = {}
 
-    arima_series = get_series(panel, ARIMA_EXAMPLE_ID)
-    if arima_series.empty:
-        print(f"Warning: ARIMA example {ARIMA_EXAMPLE_ID} not found")
-    else:
-        print(f"\n=== ARIMA example: {arima_series['id'].iloc[0]} ===")
-        results["arima"] = arima_model.evaluate_example(arima_series)
-        print(json.dumps(results["arima"], indent=2, default=str))
+    if "arima" in methods:
+        arima_series = get_series(panel, ARIMA_EXAMPLE_ID)
+        if arima_series.empty:
+            print(f"Warning: ARIMA example {ARIMA_EXAMPLE_ID} not found")
+        else:
+            print(f"\n=== ARIMA example: {arima_series['id'].iloc[0]} ===")
+            results["arima"] = arima_model.evaluate_example(arima_series)
+            print(json.dumps(results["arima"], indent=2, default=str))
 
-    prophet_series = get_series(panel, PROPHET_EXAMPLE_ID)
-    if prophet_series.empty:
-        print(f"Warning: Prophet example {PROPHET_EXAMPLE_ID} not found")
-    else:
-        sid = prophet_series["id"].iloc[0]
-        print(f"\n=== Prophet example: {sid} ===")
-        results["prophet"] = prophet_model.evaluate_example(prophet_series, calendar)
-        print(json.dumps(results["prophet"], indent=2, default=str))
+    if "prophet" in methods or "lightgbm" in methods:
+        prophet_series = get_series(panel, PROPHET_EXAMPLE_ID)
+        if prophet_series.empty:
+            print(f"Warning: Prophet example {PROPHET_EXAMPLE_ID} not found")
+        else:
+            sid = prophet_series["id"].iloc[0]
+            if "prophet" in methods:
+                print(f"\n=== Prophet example: {sid} ===")
+                results["prophet"] = prophet_model.evaluate_example(prophet_series, calendar)
+                print(json.dumps(results["prophet"], indent=2, default=str))
 
-        print(f"\n=== LightGBM example: {sid} ===")
-        lgb_out = lightgbm_model.evaluate_example(panel, sid)
-        results["lightgbm"] = {
-            "rmse": lgb_out["rmse"],
-            "train_seconds": lgb_out["train_seconds"],
-        }
-        print(json.dumps(results["lightgbm"], indent=2, default=str))
+            if "lightgbm" in methods:
+                print(f"\n=== LightGBM example: {sid} ===")
+                full_panel = build_panel(data_dir, use_cache=True)
+                lgb_out = lightgbm_model.evaluate_example(
+                    full_panel,
+                    sid,
+                    train_panel=full_panel,
+                )
+                results["lightgbm"] = {
+                    "rmse": lgb_out["rmse"],
+                    "train_seconds": lgb_out["train_seconds"],
+                    "n_train_series": lgb_out.get("n_train_series"),
+                }
+                print(json.dumps(results["lightgbm"], indent=2, default=str))
 
     _save_json(results, "example_rmse.json")
 
@@ -86,7 +104,7 @@ def run_benchmark(
     arima_order: tuple[int, int, int] | None = None,
     arima_jobs: int = 1,
 ) -> pd.DataFrame:
-    series_ids = sample_series_ids(per_category=per_category, data_dir=data_dir)
+    series_ids = load_benchmark_series_ids(per_category=per_category, data_dir=data_dir)
     print(f"\nBenchmarking {len(series_ids)} series x 28-day horizon")
 
     if panel is None or not set(series_ids).issubset(set(panel["id"].unique())):
@@ -104,7 +122,7 @@ def run_benchmark(
         arima_preds, arima_meta = forecast_arima_batch(
             panel, series_ids, order=arima_order, n_jobs=arima_jobs
         )
-        summary = rmse_by_category(arima_preds)
+        summary = rmse_by_category(arima_preds, metric="daily")
         for _, row in summary.iterrows():
             table_rows.append(
                 {"method": "ARIMA", "cat_id": row["cat_id"], "rmse": row["rmse"]}
@@ -118,7 +136,7 @@ def run_benchmark(
 
         print("\n--- Prophet ---")
         prophet_preds = forecast_prophet_batch(panel, series_ids, holidays=holidays)
-        summary = rmse_by_category(prophet_preds)
+        summary = rmse_by_category(prophet_preds, metric="horizon")
         for _, row in summary.iterrows():
             table_rows.append(
                 {"method": "Facebook Prophet", "cat_id": row["cat_id"], "rmse": row["rmse"]}
@@ -130,19 +148,33 @@ def run_benchmark(
         from src.models.lightgbm_model import forecast_lightgbm
 
         print("\n--- LightGBM ---")
-        lgb_preds, lgb_meta = forecast_lightgbm(panel, series_ids=series_ids)
-        summary = rmse_by_category(lgb_preds)
+        print("Training global model on full M5 panel, evaluating benchmark subset...")
+        full_panel = build_panel(data_dir, use_cache=True)
+        lgb_preds, lgb_meta = forecast_lightgbm(
+            full_panel,
+            eval_series_ids=series_ids,
+            train_panel=full_panel,
+        )
+        summary = rmse_by_category(lgb_preds, metric="daily")
         for _, row in summary.iterrows():
             table_rows.append(
                 {"method": "LightGBM", "cat_id": row["cat_id"], "rmse": row["rmse"]}
             )
+        per_series = per_series_rmse_table(lgb_preds)
         _save_csv(lgb_preds, "lightgbm_predictions.csv")
         _save_csv(summary, "lightgbm_rmse_summary.csv")
+        _save_csv(per_series, "lightgbm_per_series_rmse.csv")
+        foods_outliers = per_series.loc[per_series["cat_id"] == "FOODS"].head(10)
+        _save_csv(foods_outliers, "lightgbm_foods_outliers.csv")
+        if not foods_outliers.empty:
+            print("\nTop FOODS outliers (per-series RMSE):")
+            print(foods_outliers[["id", "rmse"]].to_string(index=False))
         _save_json(lgb_meta, "lightgbm_meta.json")
 
     table = pd.DataFrame(table_rows)
     pivot = table.pivot(index="cat_id", columns="method", values="rmse")
-    print("\n=== Table 3 style RMSE (mean per-series) ===")
+    print("\n=== Table 3 style RMSE ===")
+    print("(Prophet: horizon RMSE; ARIMA/LightGBM: daily RMSE — see src/evaluate.py)")
     print(pivot.to_string())
     print("\n=== Paper Table 3 reference ===")
     for method, vals in PAPER_TABLE3.items():
@@ -162,12 +194,19 @@ def run_full_lightgbm(panel: pd.DataFrame) -> None:
     from src.models.lightgbm_model import forecast_lightgbm
 
     print("\n--- LightGBM full dataset (30,490 series) ---")
-    preds, meta = forecast_lightgbm(panel, series_ids=None)
-    score = rmse(preds["sales"], preds["prediction"])
-    print(f"Full-dataset RMSE: {score:.4f}")
+    preds, meta = forecast_lightgbm(panel, eval_series_ids=None, train_panel=panel)
+    summary = rmse_by_category(preds, metric="daily")
+    pooled_rmse = rmse(preds["sales"], preds["prediction"])
+    print(f"Full-dataset pooled daily RMSE: {pooled_rmse:.4f}")
+    print(f"Full-dataset mean per-series daily RMSE: {summary.loc[summary['cat_id'] == 'TOTAL', 'rmse'].iloc[0]:.4f}")
     print(f"Training time: {meta['train_seconds']:.1f}s")
-    meta["full_rmse"] = score
+    meta["full_rmse_pooled"] = pooled_rmse
+    meta["full_rmse_per_series_mean"] = float(
+        summary.loc[summary["cat_id"] == "TOTAL", "rmse"].iloc[0]
+    )
+    meta["paper_full_rmse_reference"] = 0.32
     _save_csv(preds, "lightgbm_full_predictions.csv")
+    _save_csv(summary, "lightgbm_full_rmse_summary.csv")
     _save_json(meta, "lightgbm_full_meta.json")
 
 
@@ -208,8 +247,8 @@ def parse_args() -> argparse.Namespace:
         type=int,
         nargs=3,
         metavar=("P", "D", "Q"),
-        default=None,
-        help="Fixed ARIMA order; default is grid search per series",
+        default=(1, 1, 1),
+        help="Fixed ARIMA order for benchmark (paper example: 1 1 1)",
     )
     parser.add_argument(
         "--arima-jobs",
@@ -223,9 +262,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     per_category = 5 if args.quick else args.per_category
-    arima_order = tuple(args.arima_order) if args.arima_order else None
-    if args.quick and arima_order is None:
-        arima_order = (1, 1, 1)
+    arima_order = tuple(args.arima_order) if args.arima_order else PAPER_ARIMA_ORDER
 
     if args.stage == "eda":
         from src.eda import run_eda
@@ -240,7 +277,7 @@ def main() -> None:
         example_ids = list({ARIMA_EXAMPLE_ID, PROPHET_EXAMPLE_ID})
         panel = build_panel(args.data_dir, series_ids=example_ids, use_cache=False)
         print(f"Example panel: {panel['id'].nunique()} series")
-        run_examples(panel, args.data_dir)
+        run_examples(panel, args.data_dir, methods=tuple(args.methods))
 
     if args.stage in ("benchmark", "all"):
         run_benchmark(
