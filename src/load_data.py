@@ -162,6 +162,12 @@ def sample_series_ids(
         n = min(per_category, len(cat_ids))
         sampled = cat_ids.sample(n=n, random_state=seed).tolist()
         ids_by_cat.extend(sampled)
+
+    if use_saved:
+        BENCHMARK_SERIES_FILE.parent.mkdir(parents=True, exist_ok=True)
+        pd.DataFrame({"id": ids_by_cat}).to_csv(BENCHMARK_SERIES_FILE, index=False)
+        print(f"Saved benchmark series ids to {BENCHMARK_SERIES_FILE}")
+
     return ids_by_cat
 
 

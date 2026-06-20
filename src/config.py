@@ -3,8 +3,12 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "data" / "m5"
 OUTPUT_DIR = PROJECT_ROOT / "outputs"
-RESULTS_DIR = OUTPUT_DIR / "results"
-FIGURES_DIR = RESULTS_DIR / "figures"
+
+# Git-tracked research outputs (visible to reviewers without re-running).
+RESULTS_DIR = PROJECT_ROOT / "results" / "benchmark"
+EXAMPLES_DIR = PROJECT_ROOT / "results" / "examples"
+FIGURES_DIR = PROJECT_ROOT / "results" / "eda"
+LOGS_DIR = PROJECT_ROOT / "results" / "logs"
 
 TRAIN_END_DAY = 1913
 TEST_START_DAY = 1914

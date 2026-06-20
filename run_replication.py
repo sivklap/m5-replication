@@ -19,6 +19,8 @@ from src.config import (  # noqa: E402
     BENCHMARK_SEED,
     BENCHMARK_SERIES_FILE,
     DATA_DIR,
+    EXAMPLES_DIR,
+    LOGS_DIR,
     PAPER_ARIMA_ORDER,
     PAPER_TABLE3,
     PROPHET_EXAMPLE_ID,
@@ -34,16 +36,16 @@ from src.load_data import (  # noqa: E402
 )
 
 
-def _save_json(obj: dict, name: str) -> None:
-    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-    path = RESULTS_DIR / name
+def _save_json(obj: dict, name: str, *, out_dir: Path = RESULTS_DIR) -> None:
+    out_dir.mkdir(parents=True, exist_ok=True)
+    path = out_dir / name
     path.write_text(json.dumps(obj, indent=2, default=str))
     print(f"Saved {path}")
 
 
-def _save_csv(df: pd.DataFrame, name: str) -> None:
-    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-    path = RESULTS_DIR / name
+def _save_csv(df: pd.DataFrame, name: str, *, out_dir: Path = RESULTS_DIR) -> None:
+    out_dir.mkdir(parents=True, exist_ok=True)
+    path = out_dir / name
     df.to_csv(path, index=False)
     print(f"Saved {path}")
 
@@ -80,11 +82,10 @@ def run_examples(panel: pd.DataFrame, data_dir: Path, methods: tuple[str, ...] =
 
             if "lightgbm" in methods:
                 print(f"\n=== LightGBM example: {sid} ===")
-                full_panel = build_panel(data_dir, use_cache=True)
                 lgb_out = lightgbm_model.evaluate_example(
-                    full_panel,
+                    prophet_series,
                     sid,
-                    train_panel=full_panel,
+                    train_panel=prophet_series,
                 )
                 results["lightgbm"] = {
                     "rmse": lgb_out["rmse"],
@@ -93,7 +94,7 @@ def run_examples(panel: pd.DataFrame, data_dir: Path, methods: tuple[str, ...] =
                 }
                 print(json.dumps(results["lightgbm"], indent=2, default=str))
 
-    _save_json(results, "example_rmse.json")
+    _save_json(results, "example_rmse.json", out_dir=EXAMPLES_DIR)
 
 
 def run_benchmark(
@@ -103,6 +104,7 @@ def run_benchmark(
     methods: tuple[str, ...] = ("arima", "prophet", "lightgbm"),
     arima_order: tuple[int, int, int] | None = None,
     arima_jobs: int = 1,
+    lgb_train_scope: str = "subset",
 ) -> pd.DataFrame:
     series_ids = load_benchmark_series_ids(per_category=per_category, data_dir=data_dir)
     print(f"\nBenchmarking {len(series_ids)} series x 28-day horizon")
@@ -148,13 +150,21 @@ def run_benchmark(
         from src.models.lightgbm_model import forecast_lightgbm
 
         print("\n--- LightGBM ---")
-        print("Training global model on full M5 panel, evaluating benchmark subset...")
-        full_panel = build_panel(data_dir, use_cache=True)
+        if lgb_train_scope == "full":
+            print("Training global model on full M5 panel, evaluating benchmark subset...")
+            train_panel = build_panel(data_dir, use_cache=True)
+        else:
+            print(
+                "Training on benchmark subset (300 series). "
+                "Use --lgb-train-scope full for paper-style global training."
+            )
+            train_panel = panel
         lgb_preds, lgb_meta = forecast_lightgbm(
-            full_panel,
+            panel,
             eval_series_ids=series_ids,
-            train_panel=full_panel,
+            train_panel=train_panel,
         )
+        lgb_meta["train_scope"] = lgb_train_scope
         summary = rmse_by_category(lgb_preds, metric="daily")
         for _, row in summary.iterrows():
             table_rows.append(
@@ -256,6 +266,12 @@ def parse_args() -> argparse.Namespace:
         default=1,
         help="Parallel workers for ARIMA benchmark (default: 1)",
     )
+    parser.add_argument(
+        "--lgb-train-scope",
+        choices=["subset", "full"],
+        default="subset",
+        help="LightGBM training data: benchmark subset (default) or full 30k series",
+    )
     return parser.parse_args()
 
 
@@ -287,22 +303,28 @@ def main() -> None:
             methods=tuple(args.methods),
             arima_order=arima_order,
             arima_jobs=args.arima_jobs,
+            lgb_train_scope=args.lgb_train_scope,
         )
 
     if args.stage in ("lightgbm-full", "all"):
         if args.quick:
             print("Skipping full LightGBM in --quick mode")
         else:
-            print("Building full panel (first run caches to data/m5/panel.parquet)...")
-            panel = build_panel(args.data_dir, use_cache=True)
-            print(f"Panel: {panel.shape[0]:,} rows, {panel['id'].nunique():,} series")
-            run_full_lightgbm(panel)
+            print("Building full panel for LightGBM full-dataset evaluation...")
+            try:
+                panel = build_panel(args.data_dir, use_cache=True)
+            except MemoryError:
+                print(
+                    "Skipping lightgbm-full: not enough RAM to load the full panel. "
+                    "Run on a machine with >=32GB RAM or use --stage benchmark only."
+                )
+            else:
+                print(f"Panel: {panel.shape[0]:,} rows, {panel['id'].nunique():,} series")
+                run_full_lightgbm(panel)
 
     if args.stage in ("eda", "all") and not args.quick:
         from src.eda import run_eda
 
-        if panel is None or panel["id"].nunique() < 1000:
-            panel = build_panel(args.data_dir, use_cache=True)
         run_eda(args.data_dir)
 
 

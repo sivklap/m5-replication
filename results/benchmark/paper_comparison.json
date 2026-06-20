@@ -1,0 +1,128 @@
+{
+  "our_rmse": {
+    "ARIMA": {
+      "FOODS": 1.4854108663295562,
+      "HOBBIES": 0.8938509244813073,
+      "HOUSEHOLD": 0.939910242757384,
+      "TOTAL": 1.1063906778560826
+    },
+    "Facebook Prophet": {
+      "FOODS": 9.302794913753551,
+      "HOBBIES": 5.304406311210548,
+      "HOUSEHOLD": 5.543477870772615,
+      "TOTAL": 6.716893031912239
+    },
+    "LightGBM": {
+      "FOODS": 1.681681040081927,
+      "HOBBIES": 0.997330285532369,
+      "HOUSEHOLD": 1.1014062969465392,
+      "TOTAL": 1.2601392075202786
+    }
+  },
+  "paper_rmse": {
+    "ARIMA": {
+      "HOUSEHOLD": 0.83701,
+      "HOBBIES": 0.96462,
+      "FOODS": 1.4941,
+      "TOTAL": 1.098577
+    },
+    "Facebook Prophet": {
+      "HOUSEHOLD": 11.2851,
+      "HOBBIES": 5.8918,
+      "FOODS": 3.7229,
+      "TOTAL": 6.9666
+    },
+    "LightGBM": {
+      "HOUSEHOLD": 0.867,
+      "HOBBIES": 0.972,
+      "FOODS": 1.726,
+      "TOTAL": 1.188333
+    }
+  },
+  "comparison_rows": [
+    {
+      "method": "ARIMA",
+      "cat_id": "FOODS",
+      "our_rmse": 1.4854108663295562,
+      "paper_rmse": 1.4941,
+      "diff": -0.008689133670443772
+    },
+    {
+      "method": "ARIMA",
+      "cat_id": "HOBBIES",
+      "our_rmse": 0.8938509244813073,
+      "paper_rmse": 0.96462,
+      "diff": -0.07076907551869271
+    },
+    {
+      "method": "ARIMA",
+      "cat_id": "HOUSEHOLD",
+      "our_rmse": 0.939910242757384,
+      "paper_rmse": 0.83701,
+      "diff": 0.10290024275738396
+    },
+    {
+      "method": "ARIMA",
+      "cat_id": "TOTAL",
+      "our_rmse": 1.1063906778560826,
+      "paper_rmse": 1.098577,
+      "diff": 0.007813677856082668
+    },
+    {
+      "method": "Facebook Prophet",
+      "cat_id": "FOODS",
+      "our_rmse": 9.302794913753551,
+      "paper_rmse": 3.7229,
+      "diff": 5.579894913753551
+    },
+    {
+      "method": "Facebook Prophet",
+      "cat_id": "HOBBIES",
+      "our_rmse": 5.304406311210548,
+      "paper_rmse": 5.8918,
+      "diff": -0.5873936887894518
+    },
+    {
+      "method": "Facebook Prophet",
+      "cat_id": "HOUSEHOLD",
+      "our_rmse": 5.543477870772615,
+      "paper_rmse": 11.2851,
+      "diff": -5.741622129227385
+    },
+    {
+      "method": "Facebook Prophet",
+      "cat_id": "TOTAL",
+      "our_rmse": 6.716893031912239,
+      "paper_rmse": 6.9666,
+      "diff": -0.24970696808776083
+    },
+    {
+      "method": "LightGBM",
+      "cat_id": "FOODS",
+      "our_rmse": 1.681681040081927,
+      "paper_rmse": 1.726,
+      "diff": -0.04431895991807289
+    },
+    {
+      "method": "LightGBM",
+      "cat_id": "HOBBIES",
+      "our_rmse": 0.997330285532369,
+      "paper_rmse": 0.972,
+      "diff": 0.025330285532369046
+    },
+    {
+      "method": "LightGBM",
+      "cat_id": "HOUSEHOLD",
+      "our_rmse": 1.1014062969465392,
+      "paper_rmse": 0.867,
+      "diff": 0.23440629694653925
+    },
+    {
+      "method": "LightGBM",
+      "cat_id": "TOTAL",
+      "our_rmse": 1.2601392075202786,
+      "paper_rmse": 1.188333,
+      "diff": 0.07180620752027855
+    }
+  ]
+}

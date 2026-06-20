@@ -1,0 +1,2704 @@
+{
+  "meta": [
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2136.1014588714665,
+      "id": "FOODS_3_366_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 7192.533328557154,
+      "id": "FOODS_3_065_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4727.037382780201,
+      "id": "FOODS_3_196_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3695.3617189055667,
+      "id": "FOODS_1_002_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 7602.194310243462,
+      "id": "FOODS_3_438_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5795.32530467116,
+      "id": "FOODS_2_235_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8919.837885656267,
+      "id": "FOODS_3_383_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6458.628218823927,
+      "id": "FOODS_3_730_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6655.048337470314,
+      "id": "FOODS_3_719_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5128.11061002214,
+      "id": "FOODS_3_467_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6150.957398500921,
+      "id": "FOODS_3_286_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 12699.32564994491,
+      "id": "FOODS_3_069_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5061.632279652619,
+      "id": "FOODS_1_115_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5031.33134532823,
+      "id": "FOODS_2_230_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 7367.1435105940345,
+      "id": "FOODS_2_251_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4716.810726375853,
+      "id": "FOODS_2_324_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4066.621970501578,
+      "id": "FOODS_3_716_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8889.069885929124,
+      "id": "FOODS_3_783_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5536.413682383254,
+      "id": "FOODS_2_105_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2778.805435904301,
+      "id": "FOODS_3_620_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -155.87383479218806,
+      "id": "FOODS_2_073_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5128.339195507064,
+      "id": "FOODS_1_106_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4644.422662055853,
+      "id": "FOODS_3_450_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4085.0796497468,
+      "id": "FOODS_3_380_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6162.298275413527,
+      "id": "FOODS_3_395_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5169.4226979537125,
+      "id": "FOODS_3_314_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1692.2630164036061,
+      "id": "FOODS_2_193_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 11654.416780157826,
+      "id": "FOODS_1_218_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 14151.729312742827,
+      "id": "FOODS_3_412_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2929.239623405405,
+      "id": "FOODS_3_637_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8289.240707300456,
+      "id": "FOODS_1_137_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8406.305352468875,
+      "id": "FOODS_1_095_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6095.343611294058,
+      "id": "FOODS_3_095_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2404.395503213654,
+      "id": "FOODS_3_724_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6106.5895925611585,
+      "id": "FOODS_3_147_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8528.484190658273,
+      "id": "FOODS_3_704_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8436.702540839578,
+      "id": "FOODS_1_035_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1768.9249581174363,
+      "id": "FOODS_3_633_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 9178.665035796714,
+      "id": "FOODS_1_086_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5850.354493186478,
+      "id": "FOODS_3_557_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5234.357718749845,
+      "id": "FOODS_3_172_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2934.9757037133077,
+      "id": "FOODS_2_271_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 11559.134340056946,
+      "id": "FOODS_2_204_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4328.400874243349,
+      "id": "FOODS_1_174_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 9609.734647655103,
+      "id": "FOODS_3_404_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4025.4153393116235,
+      "id": "FOODS_3_157_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4600.115182282683,
+      "id": "FOODS_3_729_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4773.948023782172,
+      "id": "FOODS_3_506_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6658.034166043909,
+      "id": "FOODS_2_051_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 14107.091050886134,
+      "id": "FOODS_2_197_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1719.0066393546538,
+      "id": "FOODS_2_369_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 10722.009056981691,
+      "id": "FOODS_3_313_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6874.2042325714665,
+      "id": "FOODS_2_141_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4210.863498525094,
+      "id": "FOODS_2_328_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8313.98410120274,
+      "id": "FOODS_3_644_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2919.9197565439504,
+      "id": "FOODS_1_084_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2999.8184250617396,
+      "id": "FOODS_2_278_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 7790.51345723841,
+      "id": "FOODS_2_075_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3893.95518789261,
+      "id": "FOODS_2_317_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 13459.637923885577,
+      "id": "FOODS_3_281_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5964.227452716019,
+      "id": "FOODS_2_297_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8072.134070070183,
+      "id": "FOODS_3_561_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6008.493568698696,
+      "id": "FOODS_3_788_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2627.7742606423267,
+      "id": "FOODS_3_686_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6579.461659305454,
+      "id": "FOODS_3_378_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6261.437969916027,
+      "id": "FOODS_2_262_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5626.2306458608455,
+      "id": "FOODS_3_170_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4016.0916704751207,
+      "id": "FOODS_3_358_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3472.3730244583153,
+      "id": "FOODS_3_684_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 9325.87712653494,
+      "id": "FOODS_2_294_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 7304.048542347467,
+      "id": "FOODS_3_367_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5913.226440329825,
+      "id": "FOODS_3_208_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6752.8189136104575,
+      "id": "FOODS_2_392_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5059.660001016225,
+      "id": "FOODS_3_622_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 9355.720345039055,
+      "id": "FOODS_3_668_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2045.107882602492,
+      "id": "FOODS_3_254_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2821.931385261948,
+      "id": "FOODS_3_647_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5589.8355282975335,
+      "id": "FOODS_3_277_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6713.95211907439,
+      "id": "FOODS_2_311_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2933.6099875843215,
+      "id": "FOODS_3_364_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8100.724153061901,
+      "id": "FOODS_2_074_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 7227.2731356665445,
+      "id": "FOODS_3_665_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2910.320451667491,
+      "id": "FOODS_3_366_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2828.1647339344504,
+      "id": "FOODS_3_044_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6358.703994589807,
+      "id": "FOODS_3_182_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 7677.549085141348,
+      "id": "FOODS_2_082_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3614.2741897719234,
+      "id": "FOODS_2_389_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2891.3283850830157,
+      "id": "FOODS_3_280_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3402.2962402017138,
+      "id": "FOODS_3_751_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3684.367834971912,
+      "id": "FOODS_2_318_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6365.382184378534,
+      "id": "FOODS_3_542_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6699.443657047283,
+      "id": "FOODS_3_818_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 9325.35875695177,
+      "id": "FOODS_3_598_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2701.4458076388073,
+      "id": "FOODS_1_125_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 275.4717914166797,
+      "id": "FOODS_2_087_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1254.4668435573349,
+      "id": "FOODS_2_073_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6070.301293566565,
+      "id": "FOODS_3_308_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3459.70901239163,
+      "id": "HOBBIES_1_116_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4782.059725927904,
+      "id": "FOODS_3_736_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 12712.352986197948,
+      "id": "FOODS_3_454_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 9171.064234155812,
+      "id": "FOODS_1_163_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6418.529316394037,
+      "id": "HOBBIES_1_415_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5301.343794653061,
+      "id": "HOBBIES_1_383_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1319.2030994288864,
+      "id": "HOBBIES_1_095_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 406.0145895034483,
+      "id": "HOBBIES_2_113_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4166.974827619837,
+      "id": "HOBBIES_1_235_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4939.223515380752,
+      "id": "HOBBIES_1_235_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6704.246540859978,
+      "id": "HOBBIES_1_179_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8180.013080360953,
+      "id": "HOBBIES_1_252_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4243.535638666774,
+      "id": "HOBBIES_1_010_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2898.78404979109,
+      "id": "HOBBIES_1_322_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2606.433536105268,
+      "id": "HOBBIES_1_204_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 271.1849776189008,
+      "id": "HOBBIES_1_190_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3472.4790081274996,
+      "id": "HOBBIES_2_116_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3283.8956826736176,
+      "id": "HOBBIES_1_152_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 463.1155240057951,
+      "id": "HOBBIES_1_311_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2982.200094112104,
+      "id": "HOBBIES_2_128_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2150.5544882608892,
+      "id": "HOBBIES_2_092_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1135.3944993802024,
+      "id": "HOBBIES_2_139_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4279.1524584724775,
+      "id": "HOBBIES_2_143_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 10308.83479647902,
+      "id": "HOBBIES_1_295_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2410.056183232359,
+      "id": "HOBBIES_2_073_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 11614.492833665203,
+      "id": "HOBBIES_1_348_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1561.0380906368039,
+      "id": "HOBBIES_2_049_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -874.3609300970463,
+      "id": "HOBBIES_1_052_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2568.7681495186353,
+      "id": "HOBBIES_1_310_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8639.639944665225,
+      "id": "HOBBIES_1_030_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2734.036307879128,
+      "id": "HOBBIES_2_017_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6377.9096714813495,
+      "id": "HOBBIES_1_369_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1379.8648702695461,
+      "id": "HOBBIES_1_039_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5333.9170150525515,
+      "id": "HOBBIES_1_078_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4431.546812380888,
+      "id": "HOBBIES_1_226_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5192.743910309523,
+      "id": "HOBBIES_1_161_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4531.119239841014,
+      "id": "HOBBIES_1_193_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5213.299714375835,
+      "id": "HOBBIES_1_384_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 10803.409625123106,
+      "id": "HOBBIES_1_030_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5745.75934194153,
+      "id": "HOBBIES_1_017_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2932.892565375004,
+      "id": "HOBBIES_1_063_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 771.261741485592,
+      "id": "HOBBIES_1_385_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5840.582202099415,
+      "id": "HOBBIES_1_255_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3851.4682530577875,
+      "id": "HOBBIES_2_140_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3899.8880948724373,
+      "id": "HOBBIES_1_002_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2567.65976732352,
+      "id": "HOBBIES_1_324_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3566.6611539548126,
+      "id": "HOBBIES_1_281_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5149.310334902738,
+      "id": "HOBBIES_1_122_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4373.873791625905,
+      "id": "HOBBIES_1_203_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -513.414274983294,
+      "id": "HOBBIES_1_294_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 9257.013761161305,
+      "id": "HOBBIES_1_032_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1243.6906265581888,
+      "id": "HOBBIES_1_174_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 986.065246625247,
+      "id": "HOBBIES_2_077_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3929.898032580129,
+      "id": "HOBBIES_1_109_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3678.2904202926966,
+      "id": "HOBBIES_1_163_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5311.332056462382,
+      "id": "HOBBIES_2_076_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1057.3217215093896,
+      "id": "HOBBIES_1_393_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3290.322815199665,
+      "id": "HOBBIES_1_308_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2761.8805698894002,
+      "id": "HOBBIES_2_061_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4832.476763593151,
+      "id": "HOBBIES_2_091_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1233.3229275069095,
+      "id": "HOBBIES_1_046_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1717.5189259840818,
+      "id": "HOBBIES_2_050_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2942.6393397438587,
+      "id": "HOBBIES_1_213_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1316.4195114244103,
+      "id": "HOBBIES_1_168_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 62.86981650953783,
+      "id": "HOBBIES_1_081_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2660.0197908980313,
+      "id": "HOBBIES_1_392_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2868.460728064678,
+      "id": "HOBBIES_1_218_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 11807.195159516661,
+      "id": "HOBBIES_1_103_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3900.485388971927,
+      "id": "HOBBIES_1_051_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2981.7530256886903,
+      "id": "HOBBIES_1_173_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -600.2064455681284,
+      "id": "HOBBIES_2_127_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1810.4505860717334,
+      "id": "HOBBIES_2_078_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1031.7271606633924,
+      "id": "HOBBIES_1_217_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4268.082069085126,
+      "id": "HOBBIES_2_098_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1733.1393594344568,
+      "id": "HOBBIES_2_122_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 843.7103718051584,
+      "id": "HOBBIES_1_192_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4277.537424250693,
+      "id": "HOBBIES_2_085_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -50.27252677194929,
+      "id": "HOBBIES_2_027_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -1124.3994301659063,
+      "id": "HOBBIES_2_023_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2488.222050112549,
+      "id": "HOBBIES_1_176_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4579.01196286574,
+      "id": "HOBBIES_1_122_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4311.627726933302,
+      "id": "HOBBIES_1_050_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6582.396345032468,
+      "id": "HOBBIES_1_242_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2446.3531372219436,
+      "id": "HOBBIES_2_022_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1397.9354681942893,
+      "id": "HOBBIES_1_102_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1280.8598385322593,
+      "id": "HOBBIES_1_304_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3685.8837906035183,
+      "id": "HOBBIES_1_172_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -712.1334596769755,
+      "id": "HOBBIES_2_044_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3610.0331591581335,
+      "id": "HOBBIES_1_351_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -442.5026462166494,
+      "id": "HOBBIES_2_099_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1461.9271811225603,
+      "id": "HOBBIES_1_125_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1210.1900504511768,
+      "id": "HOBBIES_1_245_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5761.7574075204175,
+      "id": "HOBBIES_1_388_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5748.055786748985,
+      "id": "HOBBIES_1_090_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2533.5852762411996,
+      "id": "HOBBIES_2_018_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4754.018960275775,
+      "id": "HOBBIES_1_331_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3929.730239656363,
+      "id": "HOBBIES_1_085_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3820.0555599512995,
+      "id": "HOBBIES_1_324_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3131.479301313117,
+      "id": "HOBBIES_1_332_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -1025.4465191512193,
+      "id": "HOBBIES_1_389_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2037.5150208266064,
+      "id": "HOBBIES_1_011_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2107.848796259867,
+      "id": "HOBBIES_1_229_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3198.5287006320245,
+      "id": "HOBBIES_1_207_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 9951.04865891052,
+      "id": "HOUSEHOLD_1_179_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8079.868277445866,
+      "id": "HOUSEHOLD_1_039_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 289.130803102702,
+      "id": "HOUSEHOLD_1_496_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4829.075723470174,
+      "id": "HOUSEHOLD_1_381_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8346.391127348732,
+      "id": "HOUSEHOLD_1_021_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5560.974144870604,
+      "id": "HOUSEHOLD_1_358_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8742.5618661849,
+      "id": "HOUSEHOLD_1_310_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3009.604310409126,
+      "id": "HOUSEHOLD_1_221_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1395.8987491748967,
+      "id": "HOUSEHOLD_2_469_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1403.9381002258497,
+      "id": "HOUSEHOLD_2_458_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4180.741061244267,
+      "id": "HOUSEHOLD_1_099_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -2190.0326050679832,
+      "id": "HOUSEHOLD_2_005_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2397.006709084487,
+      "id": "HOUSEHOLD_2_402_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3402.5791498612675,
+      "id": "HOUSEHOLD_2_001_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2013.1489464202493,
+      "id": "HOUSEHOLD_2_132_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4428.4865631318025,
+      "id": "HOUSEHOLD_2_355_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1150.5937709900475,
+      "id": "HOUSEHOLD_1_231_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1135.3719650570533,
+      "id": "HOUSEHOLD_2_426_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8590.590656549293,
+      "id": "HOUSEHOLD_1_090_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4746.863141998043,
+      "id": "HOUSEHOLD_2_124_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -348.1228158256871,
+      "id": "HOUSEHOLD_2_202_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3473.2906353360822,
+      "id": "HOUSEHOLD_2_238_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5216.161272391445,
+      "id": "HOUSEHOLD_2_030_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8957.192160627748,
+      "id": "HOUSEHOLD_1_147_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4283.931857146708,
+      "id": "HOUSEHOLD_1_193_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2737.9456127186886,
+      "id": "HOUSEHOLD_2_024_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3169.349467565512,
+      "id": "HOUSEHOLD_1_077_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4196.4672647354255,
+      "id": "HOUSEHOLD_2_223_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3203.046497809559,
+      "id": "HOUSEHOLD_1_269_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 523.880080898579,
+      "id": "HOUSEHOLD_2_152_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5766.003313080396,
+      "id": "HOUSEHOLD_2_349_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2042.9832116112116,
+      "id": "HOUSEHOLD_2_113_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2435.446838518247,
+      "id": "HOUSEHOLD_2_406_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 9651.052944011437,
+      "id": "HOUSEHOLD_1_048_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2729.3945990810034,
+      "id": "HOUSEHOLD_2_039_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4511.896583607471,
+      "id": "HOUSEHOLD_2_239_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1947.6359449342838,
+      "id": "HOUSEHOLD_1_308_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3741.4606052849404,
+      "id": "HOUSEHOLD_1_440_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4490.646453436054,
+      "id": "HOUSEHOLD_1_483_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3166.194320939146,
+      "id": "HOUSEHOLD_2_411_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5763.50862429205,
+      "id": "HOUSEHOLD_1_440_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 10138.615414621492,
+      "id": "HOUSEHOLD_1_247_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 823.4787200070268,
+      "id": "HOUSEHOLD_2_210_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 7303.86597007853,
+      "id": "HOUSEHOLD_1_086_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5387.590503554647,
+      "id": "HOUSEHOLD_2_284_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1958.2833091367,
+      "id": "HOUSEHOLD_2_323_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -559.98090704651,
+      "id": "HOUSEHOLD_2_211_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2626.106471652538,
+      "id": "HOUSEHOLD_1_533_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3782.7404305518567,
+      "id": "HOUSEHOLD_1_190_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 57.262957869436946,
+      "id": "HOUSEHOLD_2_286_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5716.592197858053,
+      "id": "HOUSEHOLD_2_342_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3631.1715339802827,
+      "id": "HOUSEHOLD_2_096_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2242.5825087661483,
+      "id": "HOUSEHOLD_1_435_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3260.6414541054332,
+      "id": "HOUSEHOLD_1_091_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1915.9750315812628,
+      "id": "HOUSEHOLD_2_024_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4167.688373460159,
+      "id": "HOUSEHOLD_1_080_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6296.111177452003,
+      "id": "HOUSEHOLD_1_445_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4052.9969267309534,
+      "id": "HOUSEHOLD_1_142_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1251.684005813981,
+      "id": "HOUSEHOLD_1_501_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 7972.175685081052,
+      "id": "HOUSEHOLD_1_262_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4464.519058128707,
+      "id": "HOUSEHOLD_2_118_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 598.8675775506194,
+      "id": "HOUSEHOLD_1_449_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2614.013520526406,
+      "id": "HOUSEHOLD_2_296_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8936.283641437814,
+      "id": "HOUSEHOLD_1_473_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3752.8915649169935,
+      "id": "HOUSEHOLD_1_450_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3460.3675077698954,
+      "id": "HOUSEHOLD_1_360_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3896.0779493313275,
+      "id": "HOUSEHOLD_2_436_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1685.8214047483375,
+      "id": "HOUSEHOLD_1_258_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -344.94216420214684,
+      "id": "HOUSEHOLD_2_359_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 592.3060985184045,
+      "id": "HOUSEHOLD_2_107_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -698.8351571734528,
+      "id": "HOUSEHOLD_1_258_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8337.375451345371,
+      "id": "HOUSEHOLD_1_050_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6342.615222437704,
+      "id": "HOUSEHOLD_1_028_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2991.1665889075566,
+      "id": "HOUSEHOLD_2_076_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3241.377378962878,
+      "id": "HOUSEHOLD_1_511_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3193.4537644100174,
+      "id": "HOUSEHOLD_2_016_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 149.12927583840144,
+      "id": "HOUSEHOLD_1_104_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6505.156888309709,
+      "id": "HOUSEHOLD_1_197_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 7960.636811256335,
+      "id": "HOUSEHOLD_1_283_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4433.375484328695,
+      "id": "HOUSEHOLD_1_482_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1254.7156663228752,
+      "id": "HOUSEHOLD_2_224_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 7758.59211625408,
+      "id": "HOUSEHOLD_1_370_CA_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -892.2873528592786,
+      "id": "HOUSEHOLD_2_309_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1211.6459317420415,
+      "id": "HOUSEHOLD_2_014_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 358.4368331002845,
+      "id": "HOUSEHOLD_2_158_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6278.088463624128,
+      "id": "HOUSEHOLD_1_515_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3445.597329566217,
+      "id": "HOUSEHOLD_2_284_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3061.6101371391555,
+      "id": "HOUSEHOLD_1_417_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4250.618941184181,
+      "id": "HOUSEHOLD_1_406_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6527.577715343109,
+      "id": "HOUSEHOLD_2_389_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1835.0386463251784,
+      "id": "HOUSEHOLD_2_333_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4705.4805713403075,
+      "id": "HOUSEHOLD_1_491_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2215.4960715979423,
+      "id": "HOUSEHOLD_2_445_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -3640.2954972679045,
+      "id": "HOUSEHOLD_2_216_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 696.418273115539,
+      "id": "HOUSEHOLD_1_423_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -338.5629696385232,
+      "id": "HOUSEHOLD_2_066_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3672.908022720469,
+      "id": "HOUSEHOLD_2_182_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3174.070140302805,
+      "id": "HOUSEHOLD_2_513_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": -505.13136911283146,
+      "id": "HOUSEHOLD_2_254_TX_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3378.053885190032,
+      "id": "HOUSEHOLD_1_472_TX_3_evaluation"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+Importing plotly failed. Interactive plots will not work.
+19:43:29 - cmdstanpy - INFO - Chain [1] start processing
+19:43:30 - cmdstanpy - INFO - Chain [1] done processing
+M5 replication pipeline
+Melting 2 series x day columns...
+Merging calendar and prices...
+Example panel: 2 series
+
+=== ARIMA example: HOBBIES_2_120_CA_4_evaluation ===
+{
+  "rmse": 0.37461400766606817,
+  "order": [
+    1,
+    1,
+    1
+  ],
+  "aic": 3615.137568576341
+}
+
+=== Prophet example: HOBBIES_1_001_CA_1_evaluation ===
+{
+  "rmse": 1.7000450184586424,
+  "clip_negative": true
+}
+
+=== LightGBM example: HOBBIES_1_001_CA_1_evaluation ===
+{
+  "rmse": 1.5898232859772998,
+  "train_seconds": 0.49316741499933414,
+  "n_train_series": 1
+}
+Saved /workspace/results/examples/example_rmse.json

@@ -3,11 +3,15 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 import pandas as pd
 
-from src.config import RESULTS_DIR
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
+
+from src.config import RESULTS_DIR  # noqa: E402
 
 PAPER_TABLE_3 = {
     "ARIMA": {"HOUSEHOLD": 0.83701, "HOBBIES": 0.96462, "FOODS": 1.4941, "TOTAL": 1.098577},

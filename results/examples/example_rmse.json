@@ -1,0 +1,20 @@
+{
+  "arima": {
+    "rmse": 0.37461400766606817,
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "aic": 3615.137568576341
+  },
+  "prophet": {
+    "rmse": 1.7000450184586424,
+    "clip_negative": true
+  },
+  "lightgbm": {
+    "rmse": 1.5898232859772998,
+    "train_seconds": 0.49316741499933414,
+    "n_train_series": 1
+  }
+}
