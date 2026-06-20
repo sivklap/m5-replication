@@ -3,8 +3,8 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "data" / "m5"
 OUTPUT_DIR = PROJECT_ROOT / "outputs"
-FIGURES_DIR = OUTPUT_DIR / "figures"
 RESULTS_DIR = OUTPUT_DIR / "results"
+FIGURES_DIR = RESULTS_DIR / "figures"
 
 TRAIN_END_DAY = 1913
 TEST_START_DAY = 1914

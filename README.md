@@ -46,7 +46,7 @@ python run_replication.py
 
 | Stage | Description |
 |-------|-------------|
-| `eda` | Exploratory plots saved to `outputs/figures/` |
+| `eda` | Exploratory plots saved to `outputs/results/figures/` |
 | `examples` | Single-series examples from the paper |
 | `benchmark` | 100 series per category (300 total), Table 3 comparison |
 | `lightgbm-full` | LightGBM trained on all 30,490 series |
@@ -106,7 +106,7 @@ Results are written to `outputs/results/`:
 - `*_predictions.csv` — per-model forecast files
 - `run_*.log` — logs when using `run_all_separate.sh`
 
-Figures from EDA are saved to `outputs/figures/`.
+Figures from EDA are saved to `outputs/results/figures/`.
 
 ## Reference
 

@@ -1,0 +1,139 @@
+{
+  "meta": [
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 2136.1014588714665,
+      "id": "FOODS_3_366_TX_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3695.3617189055667,
+      "id": "FOODS_1_002_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 7192.533328557154,
+      "id": "FOODS_3_065_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4727.037382780201,
+      "id": "FOODS_3_196_WI_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 7602.194310243462,
+      "id": "FOODS_3_438_WI_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 3459.70901239163,
+      "id": "HOBBIES_1_116_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 6418.529316394037,
+      "id": "HOBBIES_1_415_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 5301.343794653061,
+      "id": "HOBBIES_1_383_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 406.0145895034483,
+      "id": "HOBBIES_2_113_CA_4_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 1319.2030994288864,
+      "id": "HOBBIES_1_095_CA_3_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 289.130803102702,
+      "id": "HOUSEHOLD_1_496_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 9951.04865891052,
+      "id": "HOUSEHOLD_1_179_CA_1_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 4829.075723470174,
+      "id": "HOUSEHOLD_1_381_TX_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8079.868277445866,
+      "id": "HOUSEHOLD_1_039_WI_2_evaluation"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 8346.391127348732,
+      "id": "HOUSEHOLD_1_021_CA_3_evaluation"
+    }
+  ]
+}

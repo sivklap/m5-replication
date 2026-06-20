@@ -1,0 +1,36 @@
+{
+  "paper_table3": {
+    "ARIMA": {
+      "HOUSEHOLD": 0.83701,
+      "HOBBIES": 0.96462,
+      "FOODS": 1.4941,
+      "TOTAL": 1.098577
+    },
+    "Facebook Prophet": {
+      "HOUSEHOLD": 11.2851,
+      "HOBBIES": 5.8918,
+      "FOODS": 3.7229,
+      "TOTAL": 6.9666
+    },
+    "LightGBM": {
+      "HOUSEHOLD": 0.867,
+      "HOBBIES": 0.972,
+      "FOODS": 1.726,
+      "TOTAL": 1.188333
+    }
+  },
+  "ours": {
+    "ARIMA": {
+      "FOODS": 0.908608096037612,
+      "HOBBIES": 0.6550367390971994,
+      "HOUSEHOLD": 1.6818461297978924,
+      "TOTAL": 1.0818303216442346
+    },
+    "Facebook Prophet": {
+      "FOODS": 5.326901275927391,
+      "HOBBIES": 3.5045166682063793,
+      "HOUSEHOLD": 8.10267803257658,
+      "TOTAL": 5.644698658903451
+    }
+  }
+}

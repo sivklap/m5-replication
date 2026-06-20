@@ -1,0 +1,118 @@
+M5 replication pipeline
+
+Benchmarking 15 series x 28-day horizon
+Building subset panel for benchmark...
+Melting 15 series x day columns...
+Merging calendar and prices...
+
+--- ARIMA ---
+ARIMA:   0%|          | 0/15 [00:00<?, ?it/s]ARIMA:   7%|▋         | 1/15 [00:00<00:01,  8.59it/s]ARIMA:  20%|██        | 3/15 [00:00<00:01, 11.02it/s]ARIMA:  33%|███▎      | 5/15 [00:00<00:00, 13.13it/s]ARIMA:  47%|████▋     | 7/15 [00:00<00:00, 13.67it/s]ARIMA:  60%|██████    | 9/15 [00:00<00:00, 11.81it/s]ARIMA:  73%|███████▎  | 11/15 [00:00<00:00, 11.30it/s]ARIMA:  87%|████████▋ | 13/15 [00:01<00:00, 11.51it/s]ARIMA: 100%|██████████| 15/15 [00:01<00:00, 12.82it/s]ARIMA: 100%|██████████| 15/15 [00:01<00:00, 12.22it/s]
+Importing plotly failed. Interactive plots will not work.
+Saved /workspace/outputs/results/arima_predictions.csv
+Saved /workspace/outputs/results/arima_rmse_summary.csv
+Saved /workspace/outputs/results/arima_meta.json
+
+--- Prophet ---
+Prophet:   0%|          | 0/15 [00:00<?, ?it/s]19:18:53 - cmdstanpy - INFO - Chain [1] start processing
+19:18:54 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:   7%|▋         | 1/15 [00:01<00:22,  1.61s/it]19:18:54 - cmdstanpy - INFO - Chain [1] start processing
+19:18:55 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  13%|█▎        | 2/15 [00:02<00:17,  1.35s/it]19:18:56 - cmdstanpy - INFO - Chain [1] start processing
+19:18:57 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  20%|██        | 3/15 [00:04<00:15,  1.30s/it]19:18:57 - cmdstanpy - INFO - Chain [1] start processing
+19:18:58 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  27%|██▋       | 4/15 [00:05<00:14,  1.34s/it]19:18:58 - cmdstanpy - INFO - Chain [1] start processing
+19:18:59 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  33%|███▎      | 5/15 [00:06<00:13,  1.31s/it]19:19:00 - cmdstanpy - INFO - Chain [1] start processing
+19:19:00 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  40%|████      | 6/15 [00:07<00:11,  1.24s/it]19:19:01 - cmdstanpy - INFO - Chain [1] start processing
+19:19:02 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  47%|████▋     | 7/15 [00:08<00:09,  1.20s/it]19:19:02 - cmdstanpy - INFO - Chain [1] start processing
+19:19:03 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  53%|█████▎    | 8/15 [00:10<00:08,  1.22s/it]19:19:03 - cmdstanpy - INFO - Chain [1] start processing
+19:19:05 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  60%|██████    | 9/15 [00:12<00:08,  1.44s/it]19:19:05 - cmdstanpy - INFO - Chain [1] start processing
+19:19:06 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  67%|██████▋   | 10/15 [00:13<00:07,  1.41s/it]19:19:06 - cmdstanpy - INFO - Chain [1] start processing
+19:19:08 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  73%|███████▎  | 11/15 [00:15<00:05,  1.49s/it]19:19:08 - cmdstanpy - INFO - Chain [1] start processing
+19:19:10 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  80%|████████  | 12/15 [00:17<00:04,  1.65s/it]19:19:10 - cmdstanpy - INFO - Chain [1] start processing
+19:19:10 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  87%|████████▋ | 13/15 [00:17<00:02,  1.36s/it]19:19:11 - cmdstanpy - INFO - Chain [1] start processing
+19:19:12 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  93%|█████████▎| 14/15 [00:19<00:01,  1.34s/it]19:19:12 - cmdstanpy - INFO - Chain [1] start processing
+19:19:14 - cmdstanpy - INFO - Chain [1] done processing
+Prophet: 100%|██████████| 15/15 [00:20<00:00,  1.48s/it]Prophet: 100%|██████████| 15/15 [00:20<00:00,  1.39s/it]
+M5 replication pipeline
+
+Benchmarking 15 series x 28-day horizon
+Building subset panel for benchmark...
+Melting 15 series x day columns...
+Merging calendar and prices...
+
+--- ARIMA ---
+ARIMA:   0%|          | 0/15 [00:00<?, ?it/s]ARIMA:   7%|▋         | 1/15 [00:00<00:01,  7.51it/s]ARIMA:  20%|██        | 3/15 [00:00<00:01, 10.56it/s]ARIMA:  33%|███▎      | 5/15 [00:00<00:00, 12.83it/s]ARIMA:  47%|████▋     | 7/15 [00:00<00:00, 13.60it/s]ARIMA:  60%|██████    | 9/15 [00:00<00:00, 12.54it/s]ARIMA:  73%|███████▎  | 11/15 [00:00<00:00, 11.74it/s]ARIMA:  87%|████████▋ | 13/15 [00:01<00:00, 11.83it/s]ARIMA: 100%|██████████| 15/15 [00:01<00:00, 13.20it/s]ARIMA: 100%|██████████| 15/15 [00:01<00:00, 12.42it/s]
+Importing plotly failed. Interactive plots will not work.
+Saved /workspace/outputs/results/arima_predictions.csv
+Saved /workspace/outputs/results/arima_rmse_summary.csv
+Saved /workspace/outputs/results/arima_meta.json
+
+--- Prophet ---
+Prophet:   0%|          | 0/15 [00:00<?, ?it/s]19:34:30 - cmdstanpy - INFO - Chain [1] start processing
+19:34:32 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:   7%|▋         | 1/15 [00:01<00:24,  1.72s/it]19:34:32 - cmdstanpy - INFO - Chain [1] start processing
+19:34:33 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  13%|█▎        | 2/15 [00:02<00:18,  1.43s/it]19:34:33 - cmdstanpy - INFO - Chain [1] start processing
+19:34:34 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  20%|██        | 3/15 [00:04<00:16,  1.39s/it]19:34:34 - cmdstanpy - INFO - Chain [1] start processing
+19:34:36 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  27%|██▋       | 4/15 [00:05<00:15,  1.40s/it]19:34:36 - cmdstanpy - INFO - Chain [1] start processing
+19:34:37 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  33%|███▎      | 5/15 [00:07<00:13,  1.39s/it]19:34:37 - cmdstanpy - INFO - Chain [1] start processing
+19:34:38 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  40%|████      | 6/15 [00:08<00:11,  1.30s/it]19:34:38 - cmdstanpy - INFO - Chain [1] start processing
+19:34:39 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  47%|████▋     | 7/15 [00:09<00:09,  1.25s/it]19:34:39 - cmdstanpy - INFO - Chain [1] start processing
+19:34:40 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  53%|█████▎    | 8/15 [00:10<00:08,  1.23s/it]19:34:41 - cmdstanpy - INFO - Chain [1] start processing
+19:34:42 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  60%|██████    | 9/15 [00:12<00:08,  1.44s/it]19:34:43 - cmdstanpy - INFO - Chain [1] start processing
+19:34:44 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  67%|██████▋   | 10/15 [00:13<00:06,  1.40s/it]19:34:44 - cmdstanpy - INFO - Chain [1] start processing
+19:34:45 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  73%|███████▎  | 11/15 [00:15<00:05,  1.48s/it]19:34:46 - cmdstanpy - INFO - Chain [1] start processing
+19:34:47 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  80%|████████  | 12/15 [00:17<00:04,  1.65s/it]19:34:48 - cmdstanpy - INFO - Chain [1] start processing
+19:34:48 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  87%|████████▋ | 13/15 [00:18<00:02,  1.37s/it]19:34:48 - cmdstanpy - INFO - Chain [1] start processing
+19:34:49 - cmdstanpy - INFO - Chain [1] done processing
+Prophet:  93%|█████████▎| 14/15 [00:19<00:01,  1.34s/it]19:34:50 - cmdstanpy - INFO - Chain [1] start processing
+19:34:51 - cmdstanpy - INFO - Chain [1] done processing
+Prophet: 100%|██████████| 15/15 [00:21<00:00,  1.49s/it]Prophet: 100%|██████████| 15/15 [00:21<00:00,  1.42s/it]
+Saved /workspace/outputs/results/prophet_predictions.csv
+Saved /workspace/outputs/results/prophet_rmse_summary.csv
+
+=== Table 3 style RMSE ===
+(Prophet: horizon RMSE; ARIMA/LightGBM: daily RMSE — see src/evaluate.py)
+method        ARIMA  Facebook Prophet
+cat_id                               
+FOODS      0.908608          5.326901
+HOBBIES    0.655037          3.504517
+HOUSEHOLD  1.681846          8.102678
+TOTAL      1.081830          5.644699
+
+=== Paper Table 3 reference ===
+ARIMA: ours vs paper
+  HOUSEHOLD: 1.682 vs 0.837
+  HOBBIES: 0.655 vs 0.965
+  FOODS: 0.909 vs 1.494
+  TOTAL: 1.082 vs 1.099
+Facebook Prophet: ours vs paper
+  HOUSEHOLD: 8.103 vs 11.285
+  HOBBIES: 3.505 vs 5.892
+  FOODS: 5.327 vs 3.723
+  TOTAL: 5.645 vs 6.967
+Saved /workspace/outputs/results/benchmark_rmse_table.csv
+Saved /workspace/outputs/results/benchmark_rmse_pivot.csv
+Saved /workspace/outputs/results/benchmark_comparison.json
