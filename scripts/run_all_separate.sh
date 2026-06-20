@@ -29,7 +29,7 @@ print('Benchmark series:', len(ids))
 run_stage examples --stage examples
 run_stage arima --stage benchmark --methods arima --per-category 100 --arima-jobs 4
 run_stage prophet --stage benchmark --methods prophet --per-category 100
-run_stage lightgbm --stage benchmark --methods lightgbm --per-category 100
+run_stage lightgbm --stage benchmark --methods lightgbm --per-category 100 --lgb-train-scope full
 
 "$PY" scripts/combine_results.py 2>&1 | tee "$RESULTS/run_combine.log"
 echo "Done. Results in $RESULTS"

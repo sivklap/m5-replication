@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import gc
+from collections.abc import Iterator
 from pathlib import Path
 
 import pandas as pd
@@ -9,6 +11,7 @@ import pandas as pd
 from src.config import DATA_DIR, TEST_END_DAY, TEST_START_DAY, TRAIN_END_DAY
 
 PANEL_CACHE = "panel.parquet"
+PANEL_CHUNK_SIZE = 2000
 
 
 def day_column(day_num: int) -> str:
@@ -82,11 +85,37 @@ def melt_sales(sales_wide: pd.DataFrame, day_cols: list[str] | None = None) -> p
 
 
 def _merge_calendar_prices(panel: pd.DataFrame, data_dir: Path) -> pd.DataFrame:
-    calendar = load_calendar(data_dir)
+    calendar = load_calendar(data_dir)[
+        ["d", "date", "wm_yr_wk", "event_type_1", "event_type_2"]
+    ]
     prices = load_sell_prices(data_dir)
     panel = panel.merge(calendar, on="d", how="left")
     panel = panel.merge(prices, on=["item_id", "store_id", "wm_yr_wk"], how="left")
+    panel["sales"] = panel["sales"].astype("float32")
+    if "sell_price" in panel.columns:
+        panel["sell_price"] = panel["sell_price"].astype("float32")
     return panel.sort_values(["id", "day_num"]).reset_index(drop=True)
+
+
+def iter_panel_chunks(
+    data_dir: Path = DATA_DIR,
+    series_ids: list[str] | None = None,
+    chunk_size: int = PANEL_CHUNK_SIZE,
+) -> Iterator[pd.DataFrame]:
+    """Yield merged panel chunks to avoid materializing the full long panel."""
+    _require_files(data_dir)
+    sales_wide = load_sales_wide(data_dir)
+    if series_ids is not None:
+        sales_wide = sales_wide[sales_wide["id"].isin(series_ids)].copy()
+
+    n_series = len(sales_wide)
+    print(f"Streaming {n_series:,} series in chunks of {chunk_size}...")
+    for start in range(0, n_series, chunk_size):
+        chunk_wide = sales_wide.iloc[start : start + chunk_size]
+        panel = _merge_calendar_prices(melt_sales(chunk_wide), data_dir)
+        yield panel
+        del chunk_wide, panel
+        gc.collect()
 
 
 def build_panel(
