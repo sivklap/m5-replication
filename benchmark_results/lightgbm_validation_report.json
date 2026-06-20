@@ -1,0 +1,150 @@
+{
+  "paper_table3_lightgbm": {
+    "HOUSEHOLD": 0.867,
+    "HOBBIES": 0.972,
+    "FOODS": 1.726,
+    "TOTAL": 1.188333
+  },
+  "benchmarks": {
+    "subset": {
+      "meta": {
+        "train_seconds": 14.493223287994624,
+        "n_series": 300,
+        "mode": "direct_lags",
+        "train_scope": "subset",
+        "n_train_series": 300,
+        "batched_train": false,
+        "incremental_train": false,
+        "paper_strict": false,
+        "feature_importance": {
+          "lag_7": 2153,
+          "lag_28": 875,
+          "rmean_7_7": 2913,
+          "rmean_28_7": 7691,
+          "rmean_7_28": 595,
+          "rmean_28_28": 1070,
+          "week": 2540,
+          "quarter": 15,
+          "mday": 1393,
+          "event_type_1": 49,
+          "event_type_2": 0,
+          "sell_price": 1258,
+          "item_id": 9009,
+          "dept_id": 0,
+          "cat_id": 0,
+          "store_id": 195,
+          "state_id": 244
+        }
+      },
+      "comparison": {
+        "FOODS": {
+          "ours": 2.2862131231493654,
+          "paper": 1.726,
+          "diff": 0.5602131231493654
+        },
+        "HOBBIES": {
+          "ours": 0.9843406770523008,
+          "paper": 0.972,
+          "diff": 0.012340677052300797
+        },
+        "HOUSEHOLD": {
+          "ours": 1.046825885452257,
+          "paper": 0.867,
+          "diff": 0.17982588545225697
+        },
+        "TOTAL": {
+          "ours": 1.439126561884641,
+          "paper": 1.188333,
+          "diff": 0.25079356188464086
+        }
+      }
+    },
+    "full": {
+      "meta": {
+        "train_seconds": 404.13509845700173,
+        "n_series": 300,
+        "mode": "direct_lags",
+        "train_scope": "full",
+        "n_train_series": 30490,
+        "batched_train": true,
+        "incremental_train": true,
+        "paper_strict": false,
+        "feature_importance": {
+          "lag_7": 2436,
+          "lag_28": 662,
+          "rmean_7_7": 3332,
+          "rmean_28_7": 8702,
+          "rmean_7_28": 543,
+          "rmean_28_28": 808,
+          "week": 379,
+          "quarter": 71,
+          "mday": 1447,
+          "event_type_1": 1,
+          "event_type_2": 0,
+          "sell_price": 938,
+          "item_id": 10640,
+          "dept_id": 0,
+          "cat_id": 40,
+          "store_id": 1,
+          "state_id": 0
+        }
+      },
+      "comparison": {
+        "FOODS": {
+          "ours": 2.4146023965156203,
+          "paper": 1.726,
+          "diff": 0.6886023965156203
+        },
+        "HOBBIES": {
+          "ours": 0.9424896596836018,
+          "paper": 0.972,
+          "diff": -0.02951034031639821
+        },
+        "HOUSEHOLD": {
+          "ours": 1.015304858945711,
+          "paper": 0.867,
+          "diff": 0.148304858945711
+        },
+        "TOTAL": {
+          "ours": 1.4574656383816444,
+          "paper": 1.188333,
+          "diff": 0.26913263838164436
+        }
+      }
+    }
+  },
+  "full_dataset": {
+    "pooled_rmse": 3.0983169014756387,
+    "paper_target": 0.32,
+    "diff": 2.778316901475639,
+    "meta": {
+      "train_seconds": 428.7322207540128,
+      "n_series": 30490,
+      "mode": "direct_lags",
+      "train_scope": "full",
+      "n_train_series": 30490,
+      "batched_train": true,
+      "incremental_train": true,
+      "paper_strict": false,
+      "feature_importance": {
+        "lag_7": 2436,
+        "lag_28": 662,
+        "rmean_7_7": 3332,
+        "rmean_28_7": 8702,
+        "rmean_7_28": 543,
+        "rmean_28_28": 808,
+        "week": 379,
+        "quarter": 71,
+        "mday": 1447,
+        "event_type_1": 1,
+        "event_type_2": 0,
+        "sell_price": 938,
+        "item_id": 10640,
+        "dept_id": 0,
+        "cat_id": 40,
+        "store_id": 1,
+        "state_id": 0
+      }
+    }
+  }
+}

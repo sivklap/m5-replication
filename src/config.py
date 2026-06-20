@@ -20,6 +20,8 @@ PROPHET_EXAMPLE_ID = "HOBBIES_1_001_CA_1_evaluation"
 # Paper Section 6: ARIMA(1,1,1) selected by grid search for the example series
 PAPER_ARIMA_EXAMPLE_ORDER = (1, 1, 1)
 
+RANDOM_SEED = 42
+
 LIGHTGBM_PARAMS = {
     "objective": "poisson",
     "metric": "rmse",
@@ -29,9 +31,11 @@ LIGHTGBM_PARAMS = {
     "min_data_in_leaf": 5,
     "verbosity": -1,
     "force_col_wise": True,
+    "seed": RANDOM_SEED,
+    "feature_fraction_seed": RANDOM_SEED,
+    "bagging_seed": RANDOM_SEED,
+    "data_random_seed": RANDOM_SEED,
 }
-
-RANDOM_SEED = 42
 
 # Paper Table 3 targets for reference
 PAPER_TABLE3 = {

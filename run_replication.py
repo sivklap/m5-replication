@@ -85,6 +85,8 @@ def run_benchmark(
     methods: tuple[str, ...] = ("arima", "prophet", "lightgbm"),
     arima_order: tuple[int, int, int] | None = None,
     arima_jobs: int = 1,
+    lgb_train_scope: str = "full",
+    paper_strict: bool = False,
 ) -> pd.DataFrame:
     series_ids = sample_series_ids(per_category=per_category, data_dir=data_dir)
     print(f"\nBenchmarking {len(series_ids)} series x 28-day horizon")
@@ -129,8 +131,19 @@ def run_benchmark(
     if "lightgbm" in methods:
         from src.models.lightgbm_model import forecast_lightgbm
 
-        print("\n--- LightGBM ---")
-        lgb_preds, lgb_meta = forecast_lightgbm(panel, series_ids=series_ids)
+        print(f"\n--- LightGBM (train_scope={lgb_train_scope}) ---")
+        if lgb_train_scope == "full":
+            # Keep the 300-series panel for evaluation; training streams all series.
+            lgb_panel = panel
+            print("Training on full M5 dataset via chunked loader")
+        else:
+            lgb_panel = panel
+        lgb_preds, lgb_meta = forecast_lightgbm(
+            lgb_panel,
+            series_ids=series_ids,
+            train_scope=lgb_train_scope,  # type: ignore[arg-type]
+            paper_strict=paper_strict,
+        )
         summary = rmse_by_category(lgb_preds)
         for _, row in summary.iterrows():
             table_rows.append(
@@ -217,6 +230,17 @@ def parse_args() -> argparse.Namespace:
         default=1,
         help="Parallel workers for ARIMA benchmark (default: 1)",
     )
+    parser.add_argument(
+        "--lgb-train-scope",
+        choices=["full", "subset"],
+        default="full",
+        help="LightGBM training data: full=train on all series (default), subset=train on benchmark sample only",
+    )
+    parser.add_argument(
+        "--paper-strict",
+        action="store_true",
+        help="LightGBM: use Table 1 features only (exclude event_type and sell_price)",
+    )
     return parser.parse_args()
 
 
@@ -250,6 +274,8 @@ def main() -> None:
             methods=tuple(args.methods),
             arima_order=arima_order,
             arima_jobs=args.arima_jobs,
+            lgb_train_scope=args.lgb_train_scope,
+            paper_strict=args.paper_strict,
         )
 
     if args.stage in ("lightgbm-full", "all"):
