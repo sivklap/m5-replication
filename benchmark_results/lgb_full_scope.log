@@ -1,0 +1,16 @@
+Melting 300 series x day columns...
+Merging calendar and prices...
+--- train_scope=full (incremental) ---
+Streaming 30,490 series in chunks of 2000...
+Streaming 30,490 series in chunks of 2000...
+Streaming 30,490 series in chunks of 2000...
+      cat_id      rmse  n_series
+0      FOODS  2.414602       100
+1    HOBBIES  0.942490       100
+2  HOUSEHOLD  1.015305       100
+3      TOTAL  1.457466       300
+  FOODS: 2.415 vs 1.726 (+0.689)
+  HOBBIES: 0.942 vs 0.972 (-0.030)
+  HOUSEHOLD: 1.015 vs 0.867 (+0.148)
+  TOTAL: 1.457 vs 1.188 (+0.269)
+meta {'train_seconds': 386.1364868380042, 'incremental_train': True, 'n_train_series': 30490}
